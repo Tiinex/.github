@@ -90,3 +90,8 @@ A stable core enables everything that comes next.
 An evolving ecosystem.  
 Infinite potential.  
 Owned by us.
+
+## Support
+
+If you find this work valuable and want to support its continued development:
+https://ko-fi.com/Tiinusen
