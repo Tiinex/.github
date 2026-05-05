@@ -2,6 +2,11 @@
 
 Infrastructure for owning and evolving inference systems.
 
+## Start here
+
+- **Core system** → https://github.com/Tiinex/ai  
+- **Tools (implementation)** → https://github.com/Tiinex/ai-vscode-tools  
+
 ---
 
 ![Tiinex System](../assets/tiinex-roadmap-progress.png)
