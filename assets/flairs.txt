@@ -1,0 +1,17 @@
+Observer: #444444
+Human-in-the-loop: #D98C00
+Builder: #00AEEF
+Researcher: #6C63FF
+Operator: #355CFF
+Archivist: #8E44AD
+Mapper: #B05CFF
+Synthesist: #FFB347
+Recovery Engineer: #1B8F4E
+Signal Analyst: #00C2A8
+Anchor: #1B8F4E
+Echo: #FFFFFF
+Kodax: #00D1B2
+Leo: #FFB347
+Myable: #FF66CC
+Orbit: #00AEEF
+Sigma: #5B4BFF
