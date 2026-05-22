@@ -4,8 +4,19 @@ Infrastructure for owning and evolving inference systems.
 
 ## Start here
 
-- **Core system** → https://github.com/Tiinex/ai  
-- **Tools (implementation)** → https://github.com/Tiinex/ai-vscode-tools  
+- **Core system, roles, and cloud context** → https://github.com/Tiinex/ai  
+- **TRACEABLE and provenance-first tooling** → https://github.com/Tiinex/ai-provenance  
+- **VS Code Local-chat inspection and cleanup tooling** → https://github.com/Tiinex/ai-vscode-tools  
+- **Experimental feedback and topic tooling** → https://github.com/Tiinex/feedback  
+- **Public website** → https://github.com/Tiinex/site  
+
+If you want to fork the right repo at the beginning, choose the repo that matches the work surface instead of starting from this `.github` repo by default.
+
+- Fork `ai` for the maintained role sources, canon, transfer artifacts, and broader inference-lab context.
+- Fork `ai-provenance` for TRACEABLE runtime, evidence generation, evidence viewing, and provenance-first debugging work.
+- Fork `ai-vscode-tools` for VS Code-specific Local-chat inspection, exact cleanup, and session-store tooling.
+- Fork `feedback` for experimental topic-oriented feedback reading and future feedback workflow work.
+- Fork `site` only when the public web surface itself is the thing you want to change.
 
 ---
 
@@ -43,7 +54,7 @@ With a continuous feedback loop enabling adaptation and refinement over time.
 
 Around the core, independent but connected layers evolve:
 
-- **Site** — the hub and system entry point  
+- **Site** — the public web surface  
 - **YouTube** — sharing the process and development  
 - **Discord** — community, feedback, and iteration  
 
@@ -70,8 +81,8 @@ The goal is to make the system understandable — not simplified.
 
 This is a living system.
 
-Some components are established.  
-Others are actively evolving or conceptual.
+Some components are established and already buildable.  
+Others are still active experiments or intentionally bounded early slices.
 
 The structure shown reflects direction — not completion.
 
