@@ -1,0 +1,289 @@
+# Continuity Context
+
+- Parent Trace: none (lineage root)
+- Type: plain-text
+- Schema: tiinex.rfc.problem-statement.v1
+
+---
+
+Network Working Group                                   Tiinex Project
+Request for Comments: RFC-0001                      Experimental Draft
+Category: Informational                                       May 2026
+
+
+        Recoverable Continuity Problem Statement
+
+
+Status of This Memo
+
+   This memo provides information for the Tiinex continuity ecosystem.
+
+   This document does not define an Internet standard of any kind.
+   Distribution of this memo is unlimited.
+
+Abstract
+
+   Modern AI-assisted workflows increasingly depend on continuity
+   distributed across chats, files, repositories, runtimes, models,
+   humans, and automation systems.
+
+   Most current systems optimize for immediacy and output generation,
+   but not for reconstructability, inspectability, lineage,
+   recoverability, or explicit continuity ownership.
+
+   This document defines the continuity problem space explored by the
+   Tiinex project.
+
+1.  Introduction
+
+   AI-assisted work increasingly spans:
+
+   o  chats
+
+   o  repositories
+
+   o  local filesystems
+
+   o  tooling runtimes
+
+   o  AI models
+
+   o  automation layers
+
+   o  distributed collaboration
+
+   Continuity between these surfaces is often implicit, opaque, and
+   difficult to reconstruct.
+
+   This creates operational problems where outputs survive but the
+   reasoning, assumptions, lineage, and workflow history become
+   fragmented or unrecoverable.
+
+2.  Problem Statement
+
+2.1.  Hidden Runtime State
+
+   Many systems depend on hidden runtime state including:
+
+   o  inaccessible session memory
+
+   o  runtime-local context
+
+   o  hidden summarization
+
+   o  opaque orchestration
+
+   o  proprietary metadata
+
+   This creates continuity dependencies that are difficult to inspect,
+   transfer, or recover.
+
+2.2.  Reconstruction Failure
+
+   When continuity degrades, users may lose the ability to:
+
+   o  reconstruct reasoning
+
+   o  inspect prior assumptions
+
+   o  recover workflow evolution
+
+   o  transfer operational context
+
+   o  understand interpretation drift
+
+2.3.  Drift
+
+   Continuity drift is treated as a normal operational reality.
+
+   Drift may include:
+
+   o  model evolution
+
+   o  summarization loss
+
+   o  runtime replacement
+
+   o  incomplete handoffs
+
+   o  changing interpretation
+
+   The goal is not eliminating drift entirely.
+
+   The goal is improving reconstructability and observability.
+
+3.  Design Direction
+
+   Tiinex explores continuity systems that prioritize:
+
+   o  explicit structure
+
+   o  recoverable artifacts
+
+   o  inspectable lineage
+
+   o  runtime agnosticism
+
+   o  portable continuity
+
+   o  human-readable formats
+
+   The project intentionally prioritizes recoverability over
+   perfection.
+
+4.  Non-Goals
+
+   This work does not attempt to:
+
+   o  replace Git
+
+   o  build AGI
+
+   o  create blockchain infrastructure
+
+   o  enforce objective truth
+
+   o  eliminate uncertainty
+
+   o  eliminate interpretation drift
+
+   o  centralize continuity ownership
+
+5.  Operational Philosophy
+
+5.1.  Explicit Missingness
+
+   Unknown or unavailable continuity SHOULD be represented explicitly
+   where possible instead of being silently fabricated or inferred.
+
+5.2.  Recoverability Over Immutability
+
+   The project prioritizes recoverability over rigid permanence.
+
+   Continuity systems SHOULD support:
+   reconstruction, lineage traversal, bounded verification, and
+   operational transparency.
+
+5.3.  Human-Centered Interpretation
+
+   Humans remain responsible for:
+
+   o  interpretation
+
+   o  governance
+
+   o  trust decisions
+
+   o  contextual judgment
+
+   The project does not assume automation replaces human oversight.
+
+6.  Continuity Artifacts
+
+   Tiinex explores continuity represented through explicit artifacts.
+
+   Potential examples include:
+
+   o  markdown traces
+
+   o  lineage references
+
+   o  continuity exports
+
+   o  integrity snapshots
+
+   o  repository structures
+
+   Continuity artifacts MAY be:
+   partial, summarized, redacted, omitted, distributed, or remotely
+   referenced.
+
+7.  Runtime Agnosticism
+
+   Continuity SHOULD survive:
+
+   o  runtime replacement
+
+   o  editor replacement
+
+   o  platform shutdown
+
+   o  tooling evolution
+
+   o  repository migration
+
+   No runtime SHOULD be treated as permanently canonical.
+
+8.  Integrity Extensions
+
+   Integrity mechanisms MAY be used to:
+
+   o  detect lineage changes
+
+   o  validate continuity snapshots
+
+   o  support reconstruction confidence
+
+   These mechanisms are intended for continuity consistency rather than
+   objective truth verification.
+
+9.  Experimental Status
+
+   This document is exploratory and subject to revision.
+
+   The ecosystem remains experimental and implementations SHOULD remain
+   flexible while continuity structures evolve.
+
+10.  Future RFC Directions
+
+   Potential future RFCs may include:
+
+   o  .trace.md structures
+
+   o  lineage traversal
+
+   o  integrity extensions
+
+   o  redaction handling
+
+   o  export formats
+
+   o  reconstruction workflows
+
+   o  continuity compression
+
+11.  Security Considerations
+
+   Continuity systems may expose:
+   historical state, metadata, lineage relationships, or operational
+   context.
+
+   Implementations SHOULD support:
+   bounded disclosure, omission, and redaction where appropriate.
+
+12.  IANA Considerations
+
+   This document has no IANA actions.
+
+13.  Conclusion
+
+   The goal is not perfect memory.
+
+   The goal is continuity that:
+   remains inspectable, survives drift, preserves lineage, allows
+   recovery, stays portable, and keeps humans in control.
+
+Author's Address
+
+   Tiinex Project
+
+   Experimental continuity infrastructure work
+
+   https://github.com/Tiinex
+
+---
+
+# Continuity Integrity
+
+- Integrity Policy: pending
+- Note: This root artifact currently establishes lineage orientation without a computed footer checksum.
