@@ -1,22 +1,6 @@
 # Tiinex
 
-Infrastructure for owning and evolving inference systems.
-
-## Start here
-
-- **Core system, roles, and cloud context** → https://github.com/Tiinex/ai  
-- **TRACEABLE and provenance-first tooling** → https://github.com/Tiinex/ai-provenance  
-- **VS Code Local-chat inspection and cleanup tooling** → https://github.com/Tiinex/ai-vscode-tools  
-- **Experimental feedback and topic tooling** → https://github.com/Tiinex/feedback  
-- **Public website** → https://github.com/Tiinex/site  
-
-If you want to fork the right repo at the beginning, choose the repo that matches the work surface instead of starting from this `.github` repo by default.
-
-- Fork `ai` for the maintained role sources, canon, transfer artifacts, and broader inference-lab context.
-- Fork `ai-provenance` for TRACEABLE runtime, evidence generation, evidence viewing, and provenance-first debugging work.
-- Fork `ai-vscode-tools` for VS Code-specific Local-chat inspection, exact cleanup, and session-store tooling.
-- Fork `feedback` for experimental topic-oriented feedback reading and future feedback workflow work.
-- Fork `site` only when the public web surface itself is the thing you want to change.
+Infrastructure for owned continuity.
 
 ---
 
@@ -24,67 +8,125 @@ If you want to fork the right repo at the beginning, choose the repo that matche
 
 ---
 
-## Core
+## What Tiinex Is
 
-Tiinex focuses on building a stable and controlled foundation for AI + AI tools.
+Tiinex explores continuity infrastructure built around operational reality.
 
-The goal is not rapid expansion —  
-but clarity, consistency, and long-term system reliability.
+The goal is not AGI, replacement of humans, or hidden orchestration magic.
 
----
+The goal is making AI-assisted workflows:
 
-## System Model
+- explicit
+- recoverable
+- inspectable
+- portable
+- lineage-aware
+- runtime-agnostic
 
-At its center, Tiinex is built around an evolving inference model.
-
-From input to output:
-
-- Perceive  
-- Filter  
-- Interpret  
-- Integrate  
-- Decide  
-- Express  
-
-With a continuous feedback loop enabling adaptation and refinement over time.
+Every interaction can become a trace.  
+Every trace can participate in lineage.  
+Continuity should survive runtimes, tools, providers, and platforms.
 
 ---
 
-## Expansion
+## Start Here
 
-Around the core, independent but connected layers evolve:
+- **Core continuity and provenance work** → https://github.com/Tiinex/ai-provenance  
+- **VS Code tooling and local inspection utilities** → https://github.com/Tiinex/ai-vscode-tools  
+- **Experimental feedback and topic tooling** → https://github.com/Tiinex/feedback  
+- **Public website** → https://github.com/Tiinex/site  
 
-- **Site** — the public web surface  
-- **YouTube** — sharing the process and development  
-- **Discord** — community, feedback, and iteration  
-
-These layers do not define the system —  
-they extend it.
+Choose the repository that matches the work surface instead of defaulting to `.github`.
 
 ---
 
-## Educational
+## Core Principles
 
-Educational is not traditional content.
+### Explicit
+No hidden state required.
 
-It is the externalization of the inference model:
+### Recoverable
+Reconstruct what happened and continue forward.
 
-- visualized (e.g. 3D / Blender)  
-- explored interactively  
-- translated across formats  
+### Observable
+Inspect traces, lineage, continuity, and artifacts.
 
-The goal is to make the system understandable — not simplified.
+### Adaptable
+Move across runtimes, providers, workflows, and environments.
+
+### Yours
+Your data. Your rules. Your continuity.
 
 ---
 
-## Status
+## Workflow Philosophy
 
-This is a living system.
+Tiinex is built around the idea that continuity should be:
 
-Some components are established and already buildable.  
-Others are still active experiments or intentionally bounded early slices.
+- inspectable instead of hidden
+- recoverable instead of fragile
+- portable instead of platform-locked
+- explicit instead of magical
 
-The structure shown reflects direction — not completion.
+The system intentionally embraces imperfect operational reality:
+
+- degraded states
+- partial success
+- unresolved outputs
+- reconstruction
+- continuation under uncertainty
+
+---
+
+## Filesystem-Native by Design
+
+The ecosystem explores:
+
+- markdown-first workflows
+- `.trace.md` lineage artifacts
+- portable `.trace.zip` exports
+- integrity verification
+- explicit provenance
+- recoverable carry-forward state
+
+The goal is not proprietary containers.
+
+The goal is continuity that survives platforms.
+
+---
+
+## Runtime Direction
+
+Tiinex currently explores workflows around:
+
+- traces
+- lineage
+- continuity carry-forward
+- provenance
+- degradation & recovery
+- export/import
+- observability
+- evaluation
+- runtime interoperability
+
+The ecosystem is intentionally modular and runtime-agnostic.
+
+---
+
+## Current State
+
+Everything is still work in progress.
+
+Documentation, semantics, workflows, and structure may evolve over time.
+
+The project is being developed in public and intentionally favors:
+
+- explicit iteration
+- inspectability
+- recoverability
+- operational grounding
+
+over polished illusion.
 
 ---
 
@@ -92,17 +134,11 @@ The structure shown reflects direction — not completion.
 
 Foundation first.
 
-A stable core enables everything that comes next.
+A stable continuity layer enables everything that comes next.
 
 ---
 
-## The Future
-
-An evolving ecosystem.  
-Infinite potential.  
-Owned by us.
-
 ## Support
 
-If you find this work valuable and want to support its continued development:
+If you find the work valuable and want to support continued development:
 https://ko-fi.com/Tiinusen
