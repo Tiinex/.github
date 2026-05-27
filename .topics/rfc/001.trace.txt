@@ -285,5 +285,6 @@ Author's Address
 
 # Continuity Integrity
 
-- Integrity Policy: pending
-- Note: This root artifact currently establishes lineage orientation without a computed footer checksum.
+- Integrity Policy: parent-lineage-sha256-v1
+- Body-Integrity: sha256:c1bdf09c5c7773bc95e90660bd98013ad9b6a006ba2a60094aa34a855c020231
+- Note: Root artifacts omit Parent-Integrity because no prior lineage step exists.
