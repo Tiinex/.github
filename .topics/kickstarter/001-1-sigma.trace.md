@@ -687,7 +687,7 @@ Model: gpt-5.4-mini
     ],
     "continuedFromParent": true,
     "parentTracePath": "001-sigma.trace.md",
-    "parentTraceChecksumSha256": "eD2rkGvt2zJnfCjkgyGnudPs4yyGShq7YrqOVpmK-fo",
+    "parentTraceChecksumSha256": "ZKShEsXqekt25ZqKnlErQXccnubl-zvZ6JhUUfsksUs",
     "lineageDepth": 2,
     "lineageLabel": "001-1",
     "recoverableCarryState": {
