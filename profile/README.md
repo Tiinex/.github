@@ -10,11 +10,11 @@ Infrastructure for owned continuity.
 
 ## What Tiinex Is
 
-Tiinex explores continuity infrastructure built around operational reality.
+Tiinex builds continuity and provenance infrastructure around operational reality.
 
 The goal is not AGI, replacement of humans, or hidden orchestration magic.
 
-The goal is making AI-assisted workflows:
+The goal is making AI-assisted work:
 
 - explicit
 - recoverable
@@ -29,12 +29,43 @@ Continuity should survive runtimes, tools, providers, and platforms.
 
 ---
 
+## What Works Now
+
+The current Tiinex stack is no longer only a theory or schema exercise.
+
+Working surfaces now include:
+
+- markdown-first provenance artifacts with explicit parent, origin, schema, and integrity boundaries
+- bounded lineage traversal that can walk a trace chain backward and preserve origin-recovery candidates
+- provenance-first tooling that can read and inspect `.trace.md` artifacts and prove the PoC v1 format in practice
+- a simple client-side public-provenance viewer direction whose newer schema surface is pushing toward a v2 receiver experience
+
+The core proof is that provenance can stay portable, legible, and traversable without requiring one opaque runtime to hold the whole story.
+
+---
+
+## Current Public State
+
+The strongest public grounding surfaces today are:
+
+- **docs** for schemas, topics, and readable trace artifacts
+- **ai-provenance** for the current PoC v1 provenance/tooling surface
+- **lineage-bridge** for bounded lineage traversal and origin-aware reconstruction logic
+- **ai-vscode-tools** for local VS Code workflow tooling around adjacent inspection and observability needs
+
+The current `site` repo should not be read as the latest product state.
+
+The newer web-app viewer/schema direction is ahead of the currently proven ai-provenance v1 tooling surface, and the polished public web surface has not yet replaced the older site repo.
+
+---
+
 ## Start Here
 
-- **Core continuity and provenance work** → https://github.com/Tiinex/ai-provenance  
-- **VS Code tooling and local inspection utilities** → https://github.com/Tiinex/ai-vscode-tools  
-- **Experimental feedback and topic tooling** → https://github.com/Tiinex/feedback  
-- **Public website** → https://github.com/Tiinex/site  
+- **Public docs and trace artifacts** → https://github.com/Tiinex/docs
+- **Core provenance tooling** → https://github.com/Tiinex/ai-provenance
+- **Lineage traversal engine** → https://github.com/Tiinex/lineage-bridge
+- **VS Code workflow tooling** → https://github.com/Tiinex/ai-vscode-tools
+- **Experimental feedback and topic tooling** → https://github.com/Tiinex/feedback
 
 Choose the repository that matches the work surface instead of defaulting to `.github`.
 
@@ -61,7 +92,7 @@ Your data. Your rules. Your continuity.
 
 ## Workflow Philosophy
 
-Tiinex is built around the idea that continuity should be:
+Tiinex is built around continuity that should be:
 
 - inspectable instead of hidden
 - recoverable instead of fragile
@@ -95,29 +126,30 @@ The goal is continuity that survives platforms.
 
 ---
 
-## Runtime Direction
+## Current Direction
 
-Tiinex currently explores workflows around:
+The current direction is to keep pushing toward receiver-safe proof surfaces:
 
-- traces
-- lineage
-- continuity carry-forward
-- provenance
-- degradation & recovery
-- export/import
-- observability
-- evaluation
-- runtime interoperability
+- read-only provenance viewing for external readers
+- clearer trust signals around verified, linked, missing, and broken lineage
+- continuity that remains understandable outside one editor or provider
+- public proof flows that stay truthful even when receiver capability, packaging, and UX are still evolving
 
-The ecosystem is intentionally modular and runtime-agnostic.
+The ecosystem remains intentionally modular and runtime-agnostic.
 
 ---
 
 ## Current State
 
-Everything is still work in progress.
+This is still active work, but the status has changed from pure exploration to early working infrastructure with an important split between proven v1 and emerging v2 surfaces.
 
-Documentation, semantics, workflows, and structure may evolve over time.
+Documentation, semantics, workflows, packaging, and UX will continue to evolve.
+
+Current read:
+
+- the provenance/tooling proof is real at PoC v1
+- the richer public viewer/schema direction is further ahead conceptually than the currently proven tooling layer
+- receiver effectiveness still depends on the receiver and the tooling available on that side
 
 The project is being developed in public and intentionally favors:
 

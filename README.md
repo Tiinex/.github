@@ -1,138 +1,22 @@
-# Tiinex Organization Profile
+# Tiinex Organization Profile Repo
 
-Tiinex is building infrastructure for owned continuity.
+This repo carries the source for the public Tiinex organization profile plus shared profile assets.
 
-The goal is not AGI, replacement of humans, or hidden orchestration magic.
+The canonical public profile lives in [profile/README.md](profile/README.md).
 
-The goal is making AI-assisted work:
+## What Lives Here
 
-- explicit
-- recoverable
-- inspectable
-- portable
-- lineage-aware
-- runtime-agnostic
+- the public organization profile source
+- shared profile assets used by that profile
+- repo-level context for the `.github` surface
 
----
+## Current Status
 
-## Core Direction
+The profile README has been updated to reflect the current state more truthfully:
 
-Tiinex explores continuity infrastructure built around operational reality.
+- provenance and lineage traversal are working today at the currently proven PoC v1 layer
+- the strongest public grounding surfaces are `docs`, `ai-provenance`, and `lineage-bridge`
+- the newer public viewer/schema direction is ahead of the currently proven ai-provenance tooling surface
+- the current `site` repo is behind the working viewer/provenance state and should not be treated as the latest product surface
 
-Every interaction can become a trace.  
-Every trace can participate in lineage.  
-Continuity should survive runtimes, tools, providers, and platforms.
-
-The system is designed around:
-
-- markdown-first workflows
-- filesystem-native inspectability
-- recoverable state
-- explicit degradation semantics
-- portable lineage
-- human-readable artifacts
-- provider/runtime interoperability
-
----
-
-## Core Principles
-
-- **Explicit** → no hidden state required  
-- **Recoverable** → reconstruct what happened  
-- **Observable** → inspect traces and continuity  
-- **Adaptable** → move across runtimes and workflows  
-- **Yours** → your data, your rules, your continuity  
-
----
-
-## Current Entry Repositories
-
-### Continuity & Provenance
-
-- **ai-provenance**  
-  Provenance-first continuity runtime and `.trace.md` experimentation.  
-  Focuses on lineage, carry-forward continuity, recoverability, exports, and runtime-agnostic workflows.
-
-### VS Code Tooling
-
-- **ai-vscode-tools**  
-  Local chat inspection, session-store tooling, export helpers, and observability utilities for VS Code workflows.
-
-### Feedback & Topic Tooling
-
-- **feedback**  
-  Experimental topic-oriented tooling, continuity evaluation, workflow iteration, and signal exploration.
-
-### Public Surface
-
-- **site**  
-  Public-facing website and ecosystem presentation layer.
-
----
-
-## Workflow Philosophy
-
-Tiinex is built around the idea that continuity should be:
-
-- inspectable instead of hidden
-- recoverable instead of fragile
-- portable instead of platform-locked
-- explicit instead of magical
-
-The system intentionally embraces imperfect operational reality:
-
-- partial success
-- degraded state
-- unresolved outputs
-- reconstruction
-- continuation under uncertainty
-
----
-
-## Export & Portability
-
-The ecosystem explores simple export semantics such as:
-
-- flat `.trace.zip` lineage exports
-- markdown-first artifacts
-- integrity verification
-- runtime/provider metadata
-- recoverable carry-forward state
-
-The goal is not proprietary containers.
-
-The goal is continuity that survives platforms.
-
----
-
-## Current State
-
-Everything is still work in progress.
-
-Documentation, semantics, workflows, and structure may evolve over time.
-
-The project is being developed in public and intentionally favors:
-- explicit iteration
-- inspectability
-- recoverability
-- operational grounding
-
-over polished illusion.
-
----
-
-## Start Here
-
-If you want to understand the direction:
-
-- start with the organization profile
-- explore `ai-provenance`
-- inspect the traces
-- follow the lineage
-- verify the claims yourself
-
----
-
-Built in public.  
-Improved in public.  
-Owned by the people who create the continuity.
+If you want the public-facing overview, read [profile/README.md](profile/README.md).
