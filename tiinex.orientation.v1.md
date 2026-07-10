@@ -59,7 +59,7 @@ Tiinex should make limits easier to see, not easier to hide.
 
 ## Ecosystem Shape
 
-Different repositories may emphasize different parts of the work, such as:
+Historically or experimentally, Tiinex has explored surfaces such as:
 
 - schemas and examples
 - provenance tooling
@@ -67,6 +67,7 @@ Different repositories may emphasize different parts of the work, such as:
 - VS Code workflows
 - viewer and receiver surfaces
 
+Current grounding is listed separately below.
 None of those alone defines all of Tiinex.
 
 ## Current Public Grounding

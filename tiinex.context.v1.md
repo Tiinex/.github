@@ -86,9 +86,9 @@ When Tiinex is working well, a later reader should be able to inspect an artifac
 ## Ecosystem Shape
 
 The Tiinex ecosystem spans multiple repositories and surfaces.
-Different repos may focus on different parts of the problem.
+Historically or experimentally, different repos have explored different parts of the problem.
 
-Typical public surfaces include:
+Examples include:
 
 - docs and schema material
 - provenance tooling
@@ -96,6 +96,7 @@ Typical public surfaces include:
 - VS Code workflow tooling
 - viewer or receiver-facing presentation
 
+Current grounding is listed separately above.
 No single repo should be mistaken for the entire project.
 
 ## Bounded Answer To "What Is Tiinex?"
