@@ -12,11 +12,16 @@ The canonical public profile lives in [profile/README.md](profile/README.md).
 
 ## Current Status
 
-The profile README has been updated to reflect the current state more truthfully:
+The profile README is meant to reflect the current public grounding surfaces truthfully.
 
-- provenance and lineage traversal are working today at the currently proven PoC v1 layer
-- the strongest public grounding surfaces are `docs`, `ai-provenance`, and `lineage-bridge`
-- the newer public viewer/schema direction is ahead of the currently proven ai-provenance tooling surface
-- the current `site` repo is behind the working viewer/provenance state and should not be treated as the latest product surface
+Current public grounding surfaces are:
+
+- `docs` for schemas, artifact examples, policy material, and Tiinex semantics
+- `site` for the current public viewer and reference implementation
+- `ai-provenance` as partially current older provenance tooling that should be verified before being treated as canonical
+
+Other Tiinex repositories may be historical, experimental, or stale and should not be presented as current without revalidation.
+
+Stable identity and context for this repo live in [tiinex.orientation.v1.md](tiinex.orientation.v1.md) and [tiinex.context.v1.md](tiinex.context.v1.md).
 
 If you want the public-facing overview, read [profile/README.md](profile/README.md).

@@ -8,6 +8,8 @@ The goal is to keep work inspectable, recoverable, portable, and honest about it
 
 ![Tiinex System](../assets/tiinex-roadmap-progress.png)
 
+Vision map, not a status dashboard. Current working surfaces are listed below.
+
 ---
 
 ## What Tiinex Does
@@ -64,24 +66,23 @@ That makes it easier to:
 
 ## What Exists Today
 
-Current public surfaces include:
+Current public grounding surfaces:
 
-- `docs` for schemas, examples, and readable artifact surfaces
-- `ai-provenance` for provenance tooling and VS Code inspection flows
-- `lineage-bridge` for bounded lineage traversal and reconstruction logic
-- `ai-vscode-tools` for local workflow tooling around adjacent inspection and observability needs
-- `feedback` for experimental feedback and topic tooling
+- `docs` for schemas, artifact examples, policy material, topics, and Tiinex semantics
+- `site` for the current public viewer and reference implementation
+- `ai-provenance` for partially current older provenance tooling; verify the specific part before treating it as authoritative
 
-The public web viewer is one surface in the ecosystem, but it is not the whole project.
+Other Tiinex repositories may be historical, experimental, or stale. Do not treat them as current product state unless they have been explicitly revalidated.
 
 ## Start Here
 
-- Public docs and artifact examples: https://github.com/Tiinex/docs
-- Provenance tooling: https://github.com/Tiinex/ai-provenance
-- Lineage traversal: https://github.com/Tiinex/lineage-bridge
-- VS Code workflow tooling: https://github.com/Tiinex/ai-vscode-tools
+- Public docs, schemas, policies, and artifacts: https://github.com/Tiinex/docs
+- Current public viewer / reference implementation: https://github.com/Tiinex/site
+- Provenance tooling, partially current: https://github.com/Tiinex/ai-provenance
 - Stable identity file for Tiinex itself: ../tiinex.orientation.v1.md
 - Self-contained context pack for LLM or handoff use: ../tiinex.context.v1.md
+
+Do not infer current Tiinex direction from older repos without revalidation.
 
 ## Longer View
 
