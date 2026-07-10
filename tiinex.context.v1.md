@@ -8,6 +8,9 @@ Tiinex saves the context of AI-assisted work as readable Markdown files you own.
 Each file can record where it came from, what it follows from, what changed, what it depends on, and how someone can continue later.
 The goal is to keep work inspectable, recoverable, portable, and honest about its limits instead of leaving the real context trapped inside one tool or chat history.
 
+The grounded public layer today is mostly plain provenance and readable artifacts.
+LLM tooling may help later where useful, but a working general-purpose Tiinex AI runtime should not be assumed.
+
 ## What Tiinex Is
 
 Tiinex is a filesystem-native way to preserve AI-assisted work as inspectable artifacts.
@@ -58,6 +61,16 @@ That creates practical problems:
 - platform changes can break continuity
 
 Tiinex tries to preserve enough visible context that continuation does not depend on blind trust.
+
+## Current Public Grounding
+
+Treat these as the current public grounding surfaces:
+
+- `docs` for schemas, examples, policies, and semantics
+- `site` for the current public viewer and reference implementation, and the strongest public proof that the format works in practice
+- `ai-provenance` only for the validator and linting surface that is still current, and only after verifying the specific part
+
+Treat other repositories as historical, experimental, or stale unless they have been explicitly revalidated.
 
 ## Practical Outcome
 

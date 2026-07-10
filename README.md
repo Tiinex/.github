@@ -14,11 +14,14 @@ The canonical public profile lives in [profile/README.md](profile/README.md).
 
 The profile README is meant to reflect the current public grounding surfaces truthfully.
 
+The current grounded public story is mainly plain provenance and readable artifacts, not a general-purpose Tiinex AI runtime.
+Future LLM tooling may support some of this work, but that should not be presented as the current baseline.
+
 Current public grounding surfaces are:
 
 - `docs` for schemas, artifact examples, policy material, and Tiinex semantics
-- `site` for the current public viewer and reference implementation
-- `ai-provenance` as partially current older provenance tooling that should be verified before being treated as canonical
+- `site` for the current public viewer and reference implementation, and the strongest public proof that the format works in practice
+- `ai-provenance` for the validator and linting surface that is still current; verify anything else there before treating it as canonical
 
 Other Tiinex repositories may be historical, experimental, or stale and should not be presented as current without revalidation.
 

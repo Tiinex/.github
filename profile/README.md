@@ -4,6 +4,9 @@ Tiinex saves the context of AI-assisted work as readable Markdown files you own.
 Each file can say where it came from, what changed, what it depends on, and how someone can continue from there later.
 The goal is to keep work inspectable, recoverable, portable, and honest about its limits instead of trapping it inside one app, model, chat history, or platform.
 
+Today the grounded parts are plain provenance, readable artifacts, and continuity structure.
+LLM tooling may support that later where it is useful, but it should not be assumed as the current runtime.
+
 ---
 
 ![Tiinex System](../assets/tiinex-roadmap-progress.png)
@@ -15,6 +18,7 @@ Vision map, not a status dashboard. Current working surfaces are listed below.
 ## What Tiinex Does
 
 Tiinex is a way to preserve AI-assisted work as readable artifacts.
+Right now the strongest grounded part is plain provenance in readable files.
 
 An artifact can be a note, decision, trace, handoff, evidence record, schema note, or other Markdown file that explains some bounded piece of work.
 
@@ -69,16 +73,19 @@ That makes it easier to:
 Current public grounding surfaces:
 
 - `docs` for schemas, artifact examples, policy material, topics, and Tiinex semantics
-- `site` for the current public viewer and reference implementation
-- `ai-provenance` for partially current older provenance tooling; verify the specific part before treating it as authoritative
+- `site` for the current public viewer and reference implementation; it is also the strongest public proof that the format works in practice
+- `ai-provenance` for the validator and linting surface that is still current; verify the specific part before treating anything else there as authoritative
 
 Other Tiinex repositories may be historical, experimental, or stale. Do not treat them as current product state unless they have been explicitly revalidated.
+
+Do not assume there is already a general-purpose Tiinex AI runtime behind these surfaces.
+The grounded public surface today is mainly readable artifacts, provenance, policies, schemas, and a viewer that can inspect them.
 
 ## Start Here
 
 - Public docs, schemas, policies, and artifacts: https://github.com/Tiinex/docs
-- Current public viewer / reference implementation: https://github.com/Tiinex/site
-- Provenance tooling, partially current: https://github.com/Tiinex/ai-provenance
+- Current public viewer / reference implementation, and the strongest public proof that the format works: https://github.com/Tiinex/site
+- Validator and linting surface that is still current in ai-provenance: https://github.com/Tiinex/ai-provenance
 - Stable identity file for Tiinex itself: ../tiinex.orientation.v1.md
 - Self-contained context pack for LLM or handoff use: ../tiinex.context.v1.md
 
