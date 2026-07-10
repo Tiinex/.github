@@ -1,0 +1,58 @@
+{
+  "manifest": "tiinex.orientation.manifest.v1",
+  "project": "Tiinex",
+  "description": "Machine-readable map of org-level Tiinex identity and context files.",
+  "files": [
+    {
+      "path": "profile/README.md",
+      "role": "human-entrypoint",
+      "audience": "human",
+      "stability": "maintained",
+      "authority": "first-contact overview"
+    },
+    {
+      "path": "tiinex.orientation.v1.md",
+      "role": "canonical-identity",
+      "audience": "human-and-machine",
+      "stability": "stable",
+      "authority": "project identity root"
+    },
+    {
+      "path": "tiinex.context.v1.md",
+      "role": "llm-orientation",
+      "audience": "machine-and-handoff",
+      "stability": "maintained",
+      "authority": "self-contained context pack"
+    },
+    {
+      "path": "releases/README.md",
+      "role": "release-status-home",
+      "audience": "human-and-machine",
+      "stability": "transient",
+      "authority": "release notes and implementation status only"
+    },
+    {
+      "path": "README.md",
+      "role": "repo-local",
+      "audience": "human",
+      "stability": "maintained",
+      "authority": "repository-level explanation for the .github repo"
+    }
+  ],
+  "semantics": {
+    "artifact": "A readable Markdown record of some work, claim, decision, context, evidence, or continuation.",
+    "root": "The starting authority or boundary for a lineage.",
+    "parent": "The declared continuity edge that says what an artifact follows from.",
+    "origin": "Where the material came from or what grounds it.",
+    "transition": "How one artifact became the next.",
+    "workspace": "A view over artifacts and sources, not the whole project.",
+    "handoff": "Enough context for another human or model to continue without guessing."
+  },
+  "notes": [
+    "Tiinex is not only the viewer.",
+    "Tiinex is not only the schema docs.",
+    "Tiinex is not an AI agent.",
+    "Tiinex is not a hidden memory service.",
+    "Status notes must not replace the stable identity files."
+  ]
+}

@@ -1,6 +1,8 @@
 # Tiinex
 
-Infrastructure for owned continuity.
+Tiinex saves the context of AI-assisted work as readable Markdown files you own.
+Each file can say where it came from, what changed, what it depends on, and how someone can continue from there later.
+The goal is to keep work inspectable, recoverable, portable, and honest about its limits instead of trapping it inside one app, model, chat history, or platform.
 
 ---
 
@@ -8,167 +10,97 @@ Infrastructure for owned continuity.
 
 ---
 
-## What Tiinex Is
+## What Tiinex Does
 
-Tiinex builds continuity and provenance infrastructure around operational reality.
+Tiinex is a way to preserve AI-assisted work as readable artifacts.
 
-The goal is not AGI, replacement of humans, or hidden orchestration magic.
+An artifact can be a note, decision, trace, handoff, evidence record, schema note, or other Markdown file that explains some bounded piece of work.
 
-The goal is making AI-assisted work:
+The important part is not only storing the file. The file should also help a later reader answer practical questions such as:
 
-- explicit
-- recoverable
-- inspectable
-- portable
-- lineage-aware
-- runtime-agnostic
+- What is this?
+- Where did it come from?
+- What does it follow from?
+- What changed here?
+- What can I trust?
+- What would I need to continue this work without guessing?
 
-Every interaction can become a trace.  
-Every trace can participate in lineage.  
-Continuity should survive runtimes, tools, providers, and platforms.
+## What Tiinex Is Not
 
----
+Tiinex is not only the viewer.
+Tiinex is not only the schema docs.
+Tiinex is not an AI agent.
+Tiinex is not a replacement for human judgment.
+Tiinex is not a hidden memory service that keeps the real state somewhere else.
 
-## What Works Now
+The files are meant to stay readable on their own.
 
-The current Tiinex stack is no longer only a theory or schema exercise.
+## Plain Terms
 
-Working surfaces now include:
+- Artifact: a readable Markdown record of some work, claim, decision, context, evidence, or continuation.
+- Root: the starting authority or boundary for a lineage.
+- Parent: the declared continuity edge that says what this artifact follows from.
+- Origin: where the material came from or what grounds it.
+- Transition: how one artifact became the next.
+- Workspace: a view over artifacts and sources, not the whole project.
+- Handoff: enough context for another human or model to continue without guessing.
 
-- markdown-first provenance artifacts with explicit parent, origin, schema, and integrity boundaries
-- bounded lineage traversal that can walk a trace chain backward and preserve origin-recovery candidates
-- provenance-first tooling that can read and inspect `.trace.md` artifacts and prove the PoC v1 format in practice
-- a simple client-side public-provenance viewer direction whose newer schema surface is pushing toward a v2 receiver experience
+These are different jobs. Tiinex does not collapse them into one generic link type.
 
-The core proof is that provenance can stay portable, legible, and traversable without requiring one opaque runtime to hold the whole story.
+## Why Someone Would Use It
 
----
+AI-assisted work often disappears into tools that are hard to inspect later.
+You may have a result but not a readable path back to the source, the decision boundary, the parent context, or the limits of the answer.
 
-## Current Public State
+Tiinex tries to preserve that path in ordinary files.
 
-The strongest public grounding surfaces today are:
+That makes it easier to:
 
-- **docs** for schemas, topics, and readable trace artifacts
-- **ai-provenance** for the current PoC v1 provenance/tooling surface
-- **lineage-bridge** for bounded lineage traversal and origin-aware reconstruction logic
-- **ai-vscode-tools** for local VS Code workflow tooling around adjacent inspection and observability needs
+- inspect what happened
+- recover after tool or platform failure
+- move work across editors, providers, or runtimes
+- hand work to another person or model
+- keep claims tied to visible sources and limits
 
-The current `site` repo should not be read as the latest product state.
+## What Exists Today
 
-The newer web-app viewer/schema direction is ahead of the currently proven ai-provenance v1 tooling surface, and the polished public web surface has not yet replaced the older site repo.
+Current public surfaces include:
 
----
+- `docs` for schemas, examples, and readable artifact surfaces
+- `ai-provenance` for provenance tooling and VS Code inspection flows
+- `lineage-bridge` for bounded lineage traversal and reconstruction logic
+- `ai-vscode-tools` for local workflow tooling around adjacent inspection and observability needs
+- `feedback` for experimental feedback and topic tooling
+
+The public web viewer is one surface in the ecosystem, but it is not the whole project.
 
 ## Start Here
 
-- **Public docs and trace artifacts** → https://github.com/Tiinex/docs
-- **Core provenance tooling** → https://github.com/Tiinex/ai-provenance
-- **Lineage traversal engine** → https://github.com/Tiinex/lineage-bridge
-- **VS Code workflow tooling** → https://github.com/Tiinex/ai-vscode-tools
-- **Experimental feedback and topic tooling** → https://github.com/Tiinex/feedback
+- Public docs and artifact examples: https://github.com/Tiinex/docs
+- Provenance tooling: https://github.com/Tiinex/ai-provenance
+- Lineage traversal: https://github.com/Tiinex/lineage-bridge
+- VS Code workflow tooling: https://github.com/Tiinex/ai-vscode-tools
+- Stable identity file for Tiinex itself: ../tiinex.orientation.v1.md
+- Self-contained context pack for LLM or handoff use: ../tiinex.context.v1.md
 
-Choose the repository that matches the work surface instead of defaulting to `.github`.
+## Longer View
 
----
+Tiinex is trying to make AI-assisted work less fragile and less opaque.
 
-## Core Principles
+That means:
 
-### Explicit
-No hidden state required.
+- readable artifacts instead of hidden state
+- explicit boundaries instead of implied memory
+- recoverable continuation instead of one-shot chat history
+- portable context instead of platform lock-in
+- honest limits instead of polished but untraceable output
 
-### Recoverable
-Reconstruct what happened and continue forward.
+This is why terms like continuity, provenance, lineage, and handoff exist in the project. They are not the first thing a reader needs to learn, but they matter once the basic job is clear.
 
-### Observable
-Inspect traces, lineage, continuity, and artifacts.
+## Status And Releases
 
-### Adaptable
-Move across runtimes, providers, workflows, and environments.
-
-### Yours
-Your data. Your rules. Your continuity.
-
----
-
-## Workflow Philosophy
-
-Tiinex is built around continuity that should be:
-
-- inspectable instead of hidden
-- recoverable instead of fragile
-- portable instead of platform-locked
-- explicit instead of magical
-
-The system intentionally embraces imperfect operational reality:
-
-- degraded states
-- partial success
-- unresolved outputs
-- reconstruction
-- continuation under uncertainty
-
----
-
-## Filesystem-Native by Design
-
-The ecosystem explores:
-
-- markdown-first workflows
-- `.trace.md` lineage artifacts
-- portable `.trace.zip` exports
-- integrity verification
-- explicit provenance
-- recoverable carry-forward state
-
-The goal is not proprietary containers.
-
-The goal is continuity that survives platforms.
-
----
-
-## Current Direction
-
-The current direction is to keep pushing toward receiver-safe proof surfaces:
-
-- read-only provenance viewing for external readers
-- clearer trust signals around verified, linked, missing, and broken lineage
-- continuity that remains understandable outside one editor or provider
-- public proof flows that stay truthful even when receiver capability, packaging, and UX are still evolving
-
-The ecosystem remains intentionally modular and runtime-agnostic.
-
----
-
-## Current State
-
-This is still active work, but the status has changed from pure exploration to early working infrastructure with an important split between proven v1 and emerging v2 surfaces.
-
-Documentation, semantics, workflows, packaging, and UX will continue to evolve.
-
-Current read:
-
-- the provenance/tooling proof is real at PoC v1
-- the richer public viewer/schema direction is further ahead conceptually than the currently proven tooling layer
-- receiver effectiveness still depends on the receiver and the tooling available on that side
-
-The project is being developed in public and intentionally favors:
-
-- explicit iteration
-- inspectability
-- recoverability
-- operational grounding
-
-over polished illusion.
-
----
-
-## Philosophy
-
-Foundation first.
-
-A stable continuity layer enables everything that comes next.
-
----
+Stable identity and definitions live in the orientation files at the repo root.
+Transient status, release notes, and implementation snapshots should live under `releases/`.
 
 ## Support
 
