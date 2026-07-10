@@ -1,30 +1,51 @@
 # Tiinex Organization Profile Repo
 
-This repo carries the source for the public Tiinex organization profile plus shared profile assets.
+This repository carries the source for the public Tiinex organization profile and shared profile assets.
 
-The canonical public profile lives in [profile/README.md](profile/README.md).
+The public profile lives in [`profile/README.md`](profile/README.md).
+
+## Current Purpose
+
+This repo is the organization-level identity surface. It should explain Tiinex before any individual repo, viewer, schema bundle, experiment, or old tool claims authority.
+
+The current public identity is provenance-first:
+
+> Tiinex keeps provenance readable in Markdown artifacts you own.
+
+Provenance means the visible trail around a piece of material: where it came from, what changed, what it depends on, what limits apply, and what should not be inferred from it.
+
+## Current Public Grounding
+
+Current public grounding surfaces are:
+
+- `docs` — schemas, artifact examples, policy material, topics, and Tiinex semantics
+- `site` — the current public viewer and reference implementation
+- `ai-provenance` — partially current; only the validator, linting, and provenance pieces that are still actively used should be treated as current without fresh validation
+
+Other Tiinex repositories may be historical, experimental, private-in-practice, or stale. Do not present them as current without revalidation.
+
+## AI / LLM Boundary
+
+AI and LLM workflows are important pressure tests and possible use cases for Tiinex, but they are not the identity boundary of the project.
+
+Do not describe Tiinex as an AI runtime, agent system, or LLM handoff product unless a specific repo or artifact explicitly implements that behavior and is current.
 
 ## What Lives Here
 
 - the public organization profile source
 - shared profile assets used by that profile
+- stable orientation and context files for first-contact readers
 - repo-level context for the `.github` surface
 
-## Current Status
+## Stable Files
 
-The profile README is meant to reflect the current public grounding surfaces truthfully.
+- [`profile/README.md`](profile/README.md) — public GitHub organization profile
+- [`tiinex.orientation.v1.md`](tiinex.orientation.v1.md) — stable project identity
+- [`tiinex.context.v1.md`](tiinex.context.v1.md) — self-contained context for readers and LLMs
+- [`tiinex.orientation.manifest.v1.json`](tiinex.orientation.manifest.v1.json) — machine-readable map of entrypoints and authority
 
-The current grounded public story is mainly plain provenance and readable artifacts, not a general-purpose Tiinex AI runtime.
-Future LLM tooling may support some of this work, but that should not be presented as the current baseline.
+## Status And Releases
 
-Current public grounding surfaces are:
+Transient status, release notes, and implementation snapshots should live under `releases/`.
 
-- `docs` for schemas, artifact examples, policy material, and Tiinex semantics
-- `site` for the current public viewer and reference implementation, and the strongest public proof that the format works in practice
-- `ai-provenance` for the validator and linting surface that is still current; verify anything else there before treating it as canonical
-
-Other Tiinex repositories may be historical, experimental, or stale and should not be presented as current without revalidation.
-
-Stable identity and context for this repo live in [tiinex.orientation.v1.md](tiinex.orientation.v1.md) and [tiinex.context.v1.md](tiinex.context.v1.md).
-
-If you want the public-facing overview, read [profile/README.md](profile/README.md).
+Do not let release notes replace the stable identity files.

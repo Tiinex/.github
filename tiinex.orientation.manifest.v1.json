@@ -2,6 +2,24 @@
   "manifest": "tiinex.orientation.manifest.v1",
   "project": "Tiinex",
   "description": "Machine-readable map of org-level Tiinex identity and context files.",
+  "identity": "Tiinex keeps provenance readable in Markdown artifacts you own.",
+  "current_public_grounding": [
+    {
+      "repo": "Tiinex/docs",
+      "status": "current",
+      "role": "schemas, artifact examples, policy material, topics, and semantics"
+    },
+    {
+      "repo": "Tiinex/site",
+      "status": "current",
+      "role": "public viewer and reference implementation"
+    },
+    {
+      "repo": "Tiinex/ai-provenance",
+      "status": "partial-current",
+      "role": "validator, linting, and provenance pieces only; verify specific parts"
+    }
+  ],
   "files": [
     {
       "path": "profile/README.md",
@@ -19,8 +37,8 @@
     },
     {
       "path": "tiinex.context.v1.md",
-      "role": "llm-orientation",
-      "audience": "machine-and-handoff",
+      "role": "reader-and-llm-orientation",
+      "audience": "human-and-machine",
       "stability": "maintained",
       "authority": "self-contained context pack"
     },
@@ -40,19 +58,20 @@
     }
   ],
   "semantics": {
-    "artifact": "A readable Markdown record of some work, claim, decision, context, evidence, or continuation.",
+    "artifact": "A readable Markdown record of some work, claim, decision, source boundary, evidence, policy, or continuation state.",
+    "provenance": "The visible trail around material: where it came from, what changed, what supports it, and what limits apply.",
     "root": "The starting authority or boundary for a lineage.",
     "parent": "The declared continuity edge that says what an artifact follows from.",
     "origin": "Where the material came from or what grounds it.",
     "transition": "How one artifact became the next.",
-    "workspace": "A view over artifacts and sources, not the whole project.",
-    "handoff": "Enough context for another human or model to continue without guessing."
+    "policy": "Explicit boundaries around use, consent, attribution, interpretation, or continuation.",
+    "workspace": "A view over artifacts and sources, not the whole project."
   },
   "notes": [
+    "AI and LLM workflows are use cases and pressure tests, not the identity boundary.",
     "Tiinex is not only the viewer.",
     "Tiinex is not only the schema docs.",
-    "Tiinex is not an AI agent.",
-    "Tiinex is not a hidden memory service.",
+    "Tiinex is not an AI agent or general-purpose AI runtime.",
     "Status notes must not replace the stable identity files."
   ]
 }
