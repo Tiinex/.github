@@ -1,129 +1,68 @@
+<p align="center">
+  <img src="../assets/tiinex-system-map.png" alt="Tiinex system map" />
+</p>
+
 # Tiinex
 
-Tiinex keeps provenance readable in Markdown artifacts you own.
+Tiinex is an open-source format and toolkit for keeping **work, provenance, and continuity readable, portable, and recoverable**.
 
-Provenance means the visible trail around a piece of material: where it came from, what changed, what it depends on, what limits apply, and what should not be inferred from it.
+Important work often survives while the context around it disappears into chats, tools, private state, undocumented assumptions, or platform-specific history. Tiinex keeps that context close to the work in human-readable artifacts that can be inspected, continued, reviewed, and moved across tools without depending on one application or provider to explain what happened.
 
-The goal is to make work inspectable, recoverable, portable, and honest about its boundaries instead of hiding the important context inside one app, platform, chat history, private runtime, or later explanation.
+## Core principles
 
----
+- **Human-readable first.** Important meaning should remain understandable without a specific runtime or UI.
+- **Explicit continuity.** Parent, origin, transition, evidence, policy, and Handoff describe different relationships and are kept distinct.
+- **Portable by design.** Artifacts and Workspaces can move across hosts and providers without becoming owned by them.
+- **Location is not authority.** A repository, provider, UI, or publication target does not define an artifact's semantics merely because it stores or presents it.
+- **Context is not mutation authority.** Material carried for grounding or review is not automatically writable or transferred work.
 
-![Tiinex System](../assets/tiinex-roadmap-progress.png)
+## What Tiinex can preserve
 
-Vision map, not a status dashboard. Some parts are implemented, some are active direction, and some are ambition. Current public grounding surfaces are listed below.
+Tiinex artifacts can carry the context needed to understand and continue work, including:
 
----
+- where material came from
+- what it follows from
+- what changed and why
+- evidence and source boundaries
+- dependencies and limitations
+- decisions, tasks, and responsibilities
+- Handoffs between people, tools, or roles
+- what should not be inferred from the material
 
-## What Tiinex Does
+The shared semantic surface stays human-readable. Runtime projections, caches, transport representations, and UI state may be machine-oriented, but they do not replace artifact meaning.
 
-Tiinex is a way to preserve provenance as readable artifacts.
+## Architecture
 
-An artifact can be a note, decision, trace, evidence record, schema note, policy note, source boundary, workspace entrypoint, or other Markdown file that explains a bounded piece of material.
+Tiinex separates authority, mechanics, application state, sources, presentation, interoperability, hosts, and execution so each layer can evolve without becoming a second source of truth.
 
-The important part is not only storing the file. The artifact should help a later reader answer practical questions such as:
+| Area | Responsibility | Repositories |
+| --- | --- | --- |
+| Project intent | Initiatives, priorities, roles, and human gates | [`business`](https://github.com/Tiinex/business) |
+| Semantics | Canonical schemas, contracts, and interpretation rules | [`docs`](https://github.com/Tiinex/docs) |
+| Shared mechanics | Artifacts, lineage, validation, grounding, Handoffs, packaging, and Tooling | [`core`](https://github.com/Tiinex/core) |
+| Application | Shared Workspace data plane, composition, and Verse hosting | [`app`](https://github.com/Tiinex/app) |
+| Providers | Source discovery, resolution, and publication | [`provider-native`](https://github.com/Tiinex/provider-native), [`provider-github`](https://github.com/Tiinex/provider-github) |
+| Presentation | Viewer and spatial presentation families | [`verse-native`](https://github.com/Tiinex/verse-native), [`verse-atlas`](https://github.com/Tiinex/verse-atlas), [`verse-playthings`](https://github.com/Tiinex/verse-playthings) |
+| Interoperability | External environments and capability integration | [`interop-native`](https://github.com/Tiinex/interop-native), [`interop-openai`](https://github.com/Tiinex/interop-openai) |
+| Hosts | Web, editor, browser-extension, and command-line surfaces | [`site`](https://github.com/Tiinex/site), [`extension-vscode`](https://github.com/Tiinex/extension-vscode), [`extension-chrome`](https://github.com/Tiinex/extension-chrome), [`cli`](https://github.com/Tiinex/cli) |
+| Execution | Provider-, environment-, and host-agnostic headless orchestration | [`runtime-native`](https://github.com/Tiinex/runtime-native) |
 
-- What is this?
-- Where did it come from?
-- What does it depend on?
-- What does it follow from?
-- What changed?
-- What can I trust?
-- What are the limits?
-- What should not be inferred from it?
+## Works with existing systems
 
-## Why Markdown Artifacts
+Tiinex does not require every external system to store native Tiinex artifacts.
 
-Markdown is readable, portable, diffable, and works across many tools.
+External material can be presented as a synthetic Tiinex projection when no artifact exists. When an external object carries a real Tiinex payload, Tiinex can recover and qualify that artifact instead of inventing a competing semantic representation.
 
-Tiinex uses Markdown because the important context should not require a private database, a single app, a hidden model memory, or a vendor dashboard before a person can inspect it.
+This lets systems such as GitHub Issues and pull requests remain useful in their native form while participating in the same broader provenance and continuity model.
 
-The artifact should carry enough meaning that another reader can see the boundary of the material before trusting or continuing from it.
+## Start here
 
-## What Tiinex Is Not
+- **Schemas and semantics:** [`Tiinex/docs`](https://github.com/Tiinex/docs)
+- **Shared mechanics and Tooling:** [`Tiinex/core`](https://github.com/Tiinex/core)
+- **Application layer:** [`Tiinex/app`](https://github.com/Tiinex/app)
+- **Official web host:** [`Tiinex/site`](https://github.com/Tiinex/site)
+- **Project intent and organization:** [`Tiinex/business`](https://github.com/Tiinex/business)
 
-Tiinex is not only the viewer.
-Tiinex is not only the schema docs.
-Tiinex is not an AI agent.
-Tiinex is not a general-purpose AI runtime.
-Tiinex is not a replacement for human judgment.
-Tiinex is not a hidden memory service that keeps the real state somewhere else.
+**Website:** https://tiinex.dev
 
-AI and LLM workflows are important use cases and pressure tests. They are not the identity boundary of the project.
-
-## Plain Terms
-
-- Artifact: a readable Markdown record of some work, claim, decision, source boundary, evidence, policy, or continuation state.
-- Provenance: the visible trail around material: where it came from, what changed, what supports it, and what limits apply.
-- Root: the starting authority or boundary for a lineage.
-- Parent: the declared continuity edge that says what this artifact follows from.
-- Origin: where the material came from or what grounds it.
-- Transition: how one artifact became the next.
-- Policy: explicit boundaries around use, consent, attribution, interpretation, or continuation.
-- Workspace: a view over artifacts and sources, not the whole project.
-
-These are different jobs. Tiinex does not collapse them into one generic link type.
-
-## Why Someone Would Use It
-
-Work often loses its provenance.
-
-A useful result might survive while the path back to its source, limits, decision boundary, or evidence disappears. That makes it hard to review, recover, reuse, or explain what happened.
-
-Tiinex tries to preserve that path in ordinary files.
-
-That makes it easier to:
-
-- inspect what happened
-- keep claims tied to visible sources and limits
-- recover after tool or platform failure
-- move material across tools or repositories
-- review boundaries before trusting a result
-- continue from explicit context instead of guessing
-
-## What Exists Today
-
-Current public grounding surfaces:
-
-- `docs` for schemas, artifact examples, policy material, topics, and Tiinex semantics
-- `site` for the current public viewer and reference implementation
-- `ai-provenance` for the validator, linting, and provenance pieces that are still current; verify the specific part before treating anything else there as authoritative
-
-Other Tiinex repositories may be historical, experimental, private-in-practice, or stale. Do not treat them as current product state unless they have been explicitly revalidated.
-
-Do not assume there is a general-purpose Tiinex AI runtime behind these surfaces.
-
-The grounded public surface today is mainly readable artifacts, provenance, policies, schemas, and a viewer that can inspect them.
-
-## Start Here
-
-- Public docs, schemas, policies, and artifacts: https://github.com/Tiinex/docs
-- Current public viewer / reference implementation: https://github.com/Tiinex/site
-- Partially current provenance validation/linting surface: https://github.com/Tiinex/ai-provenance
-- Stable identity file for Tiinex itself: ../tiinex.orientation.v1.md
-- Self-contained context pack for reader or LLM use: ../tiinex.context.v1.md
-
-Do not infer current Tiinex direction from older repos without revalidation.
-
-## Longer View
-
-Tiinex is trying to make provenance less fragile and less opaque.
-
-That means:
-
-- readable artifacts instead of hidden state
-- explicit boundaries instead of implied memory
-- visible source and change context instead of polished but untraceable output
-- portable context instead of platform lock-in
-- honest limits instead of claims detached from evidence
-
-This is why terms like provenance, lineage, root, parent, origin, transition, policy, and workspace exist in the project. They are not the first thing a reader needs to master, but they matter once the basic job is clear.
-
-## Status And Releases
-
-Stable identity and definitions live in the orientation files at the repo root.
-Transient status, release notes, and implementation snapshots should live under `releases/`.
-
-## Support
-
-If you find the work valuable and want to support continued development:
-https://ko-fi.com/Tiinusen
+> Meaning belongs in readable Tiinex artifacts and contracts. Shared implementation provides the mechanics. Hosts and providers expose capabilities without becoming semantic authority.
